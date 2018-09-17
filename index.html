@@ -23,10 +23,12 @@
   <main class="main">
     <form id="form" class="main__form">
       <label class="form__subheader --simple" for="inpSimple">text input
-        <input class="input  --simple" type="text" name="input-simple" id="inpSimple">
+        <input class="input  --simple" type="text" name="input-simple" id="inpSimple" placeholder="placeholder text">
       </label>
       <label class="form__subheader  --validation" for="inpValidation">text input w/ validation error
-        <input class="input  --validation" type="text" name="input-validation" id="inpValidation">
+        <input class="input  --validation" type="text" name="input-validation" id="inpValidation" placeholder="placeholder text"
+          required>
+        <div class="input__warning">please enter a valid username</div>
       </label>
       <label class="form__subheader" for="selClosed">select box
         <div class="selector__wrapper">
