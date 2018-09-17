@@ -19,7 +19,8 @@ body {
 }
 
 .header,
-.main {
+.main,
+.footer {
   max-width: 60%;
   margin: 2em;
 }
@@ -35,31 +36,23 @@ body {
   height: 0;
   position: absolute;
   top: 40%;
-  right: 21%;
+  right: 1em;
   width: 0;
 }
 
-.selector .selector__wrapper::before:active {
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 12px solid #666;
-  content: "";
-  height: 0;
-  position: absolute;
-  top: 40%;
-  right: 21%;
-}
-
 .selector {
-  display: block;
-  width: 80%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: white;
+  display: block;
+  padding: 0.4em;
+  width: 100%;
 }
+
 .option {
   padding: 0;
-  list-style: none;
+  background-color: #eee;
 }
 
 p {

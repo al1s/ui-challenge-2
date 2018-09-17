@@ -33,7 +33,7 @@
       <label class="form__subheader" for="selClosed">select box
         <div class="selector__wrapper">
           <select class="selector  --closed" name="selector-closed" id="selClosed">
-            <option class="selector__option" value=""></option>
+            <option class="selector__option" value="">please select an option</option>
             <option class="selector__option" value="option 1">option 1</option>
             <option class="selector__option" value="option 2">option 2</option>
             <option class="selector__option" value="option 3">option 3</option>
@@ -44,7 +44,8 @@
       </label>
       <label class="form__subheader" for="selOpened">select box - open
         <div class="selector__wrapper">
-          <select class="selector  --opened" name="selector-opened" id="selOpened">
+          <select class="selector  --opened" name="selector-opened" id="selOpened" aria-placeholder="">
+            <option class="selector__option" value="">please select an option</option>
             <option class="selector__option" value="option 1">option 1</option>
             <option class="selector__option" value="option 2">option 2</option>
             <option class="selector__option" value="option 3">option 3</option>
@@ -74,7 +75,7 @@
       </div>
     </form>
   </main>
-  <footer>
+  <footer class="footer">
     &copy; 2018 Code Fellows | UI-challenge-2 (Sprites)
   </footer>
 </body>
