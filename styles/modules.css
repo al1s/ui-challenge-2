@@ -24,26 +24,39 @@ body {
   margin: 2em;
 }
 
+.selector__wrapper {
+  position: relative;
+}
+.selector__wrapper::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid #666;
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 40%;
+  right: 21%;
+  width: 0;
+}
+
+.selector .selector__wrapper::before:active {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 12px solid #666;
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 40%;
+  right: 21%;
+}
+
 .selector {
   display: block;
-  position: relative;
   width: 80%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-.selector::before {
-  background: url("../vendor/styles/sprites/form-elements-sprite.png") no-repeat -1143px -280px;
-  content: "";
-  height: 0.3em;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 0.3em;
-  z-index: 2;
-}
-
-.selector::after:active {
-  background: url("../vendor/styles/sprites/form-elements-sprite.png") no-repeat -1035px -280px;
-}
-
 .option {
   padding: 0;
   list-style: none;
@@ -53,9 +66,12 @@ p {
   font-size: 1em;
 }
 
-.label {
+.form__subheader {
   display: block;
   font-size: 2em;
+  margin: 1em 0em;
+  padding: 0;
+  font-weight: 500;
 }
 
 .input {
@@ -67,11 +83,23 @@ p {
 }
 
 .input__chkb {
-  background: url("../vendor/styles/sprites/form-elements-sprite.png") no-repeat -158px -239px;
-  height: 1em;
-  width: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  left: -999px;
 }
-.input__chkb:checked {
+
+.checkbox__label {
+  background: url("../vendor/styles/sprites/form-elements-sprite.png") no-repeat -158px -239px;
+  height: 10em;
+  width: 10em;
+  margin: -4em -3em -5em -4em;
+  transform: scale(0.3);
+  display: inline-block;
+}
+
+.input__chkb:checked + .checkbox__label {
   background: url("../vendor/styles/sprites/form-elements-sprite.png") no-repeat -381px -239px;
 }
 
@@ -79,15 +107,40 @@ p {
   border-color: #ae3f3c;
 }
 
-.input:valid {
-  border-color: #89cb8e;
+.radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  left: -999px;
 }
 
-.radio {
+.radio__label {
   background: url("../vendor/styles/sprites/form-elements-sprite.png") no-repeat -582px -242px;
-  height: 1.5em;
-  width: 1.5em;
+  height: 11em;
+  width: 11em;
+  margin: -4em -3em -2em -4.5em;
+  transform: scale(0.3);
+  display: inline-block;
 }
-.radio:checked {
+
+.radio:checked + .radio__label {
   background: url("../vendor/styles/sprites/form-elements-sprite.png") no-repeat -812px -242px;
+}
+
+.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  font-weight: 600;
+  height: 3em;
+  width: 7em;
+}
+
+.btn:nth-of-type(2) {
+  background-color: black;
+  color: white;
+  margin-left: 0.3em;
 }

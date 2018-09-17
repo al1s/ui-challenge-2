@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="vendor/styles/normalize.css">
   <link rel="stylesheet" href="vendor/styles/sprites.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
 </head>
 
@@ -24,47 +22,54 @@
   </header>
   <main class="main">
     <form id="form" class="main__form">
-      <label class="label --simple" for="inpSimple">text input
+      <label class="form__subheader --simple" for="inpSimple">text input
         <input class="input  --simple" type="text" name="input-simple" id="inpSimple">
       </label>
-      <label class="label  --validation" for="inpValidation">text input w/ validation error
+      <label class="form__subheader  --validation" for="inpValidation">text input w/ validation error
         <input class="input  --validation" type="text" name="input-validation" id="inpValidation">
       </label>
-      <label class="label" for="selClosed">select box
-        <select class="selector  --closed" name="selector-closed" id="selClosed">
-          <option class="selector__option" value=""></option>
-          <option class="selector__option" value="option 1">option 1</option>
-          <option class="selector__option" value="option 2">option 2</option>
-          <option class="selector__option" value="option 3">option 3</option>
-          <option class="selector__option" value="option 4">option 4</option>
-          <option class="selector__option" value="option 5">option 5</option>
-        </select>
-      </label>
-      <label class="label" for="selOpened">select box - open
-        <select class="selector  --opened" name="selector-opened" id="selOpened">
-          <option class="selector__option" value="option 1">option 1</option>
-          <option class="selector__option" value="option 2">option 2</option>
-          <option class="selector__option" value="option 3">option 3</option>
-          <option class="selector__option" value="option 4">option 4</option>
-          <option class="selector__option" value="option 5">option 5</option>
-        </select>
-      </label>
-      <label class="label" for="checkbox">checkbox
-        <div>
-          <input class="input__chkb" type="checkbox" name="checkbox" id="chkb1">
-          <input class="input__chkb" type="checkbox" name="checkbox" id="chkb2" checked>
+      <label class="form__subheader" for="selClosed">select box
+        <div class="selector__wrapper">
+          <select class="selector  --closed" name="selector-closed" id="selClosed">
+            <option class="selector__option" value=""></option>
+            <option class="selector__option" value="option 1">option 1</option>
+            <option class="selector__option" value="option 2">option 2</option>
+            <option class="selector__option" value="option 3">option 3</option>
+            <option class="selector__option" value="option 4">option 4</option>
+            <option class="selector__option" value="option 5">option 5</option>
+          </select>
         </div>
       </label>
-      <label class="label" for="radioGrp">radio
-        <div>
-          <input class="radio" type="radio" name="radioGrp" id="radio1">
-          <input class="radio" type="radio" name="radioGrp" id="radio2" checked>
+      <label class="form__subheader" for="selOpened">select box - open
+        <div class="selector__wrapper">
+          <select class="selector  --opened" name="selector-opened" id="selOpened">
+            <option class="selector__option" value="option 1">option 1</option>
+            <option class="selector__option" value="option 2">option 2</option>
+            <option class="selector__option" value="option 3">option 3</option>
+            <option class="selector__option" value="option 4">option 4</option>
+            <option class="selector__option" value="option 5">option 5</option>
+          </select>
         </div>
       </label>
-      <label classs="label" for="btn">
+      <div class="checkboxes">
+        <h2 class="form__subheader">checkbox</h2>
+        <input class="input__chkb" type="checkbox" name="checkbox" id="chkb1">
+        <label class="label  checkbox__label" for="chkb1"></label>
+        <input class="input__chkb" type="checkbox" name="checkbox" id="chkb2" checked>
+        <label class="label  checkbox__label" for="chkb2"></label>
+      </div>
+      <div class="radio-buttons">
+        <h2 class="form__subheader">radio</h2>
+        <input class="radio" type="radio" name="radioGrp" id="radio1">
+        <label class="label  radio__label" for="radio1"></label>
+        <input class="radio" type="radio" name="radioGrp" id="radio2" checked>
+        <label class="label  radio__label" for="radio2"></label>
+      </div>
+      <div classs="label">
+        <h2 class="form__subheader">buttons</h2>
         <input class="btn  btn__submit  --lighter" type="submit" value="submit">
         <input class="btn  btn__submit  --darker" type="submit" value="submit">
-      </label>
+      </div>
     </form>
   </main>
   <footer>
